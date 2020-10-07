@@ -1,0 +1,121 @@
+body {
+    display: grid;
+    grid-template-rows: 67px auto;
+    height: 100vh;
+    background-color: #d2d2d2;
+    margin: 0;
+}
+
+header {
+    background-color: #a7a7a7;
+}
+
+.site-title {
+    margin: 21px 40px;
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: 25px;
+    font-weight: bold;
+    color: #001632;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.whole-container {
+    height: 23vw;
+    width: 75%;
+    display: flex;
+    align-self: flex-end;
+}
+
+.small-set-blocks {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-grow: 3;
+}
+
+.big-set-blocks {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-grow: 4;
+}
+
+.white-blocks-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.black-blocks-container {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    height: 100%;
+}
+
+.big-set-blocks .black-blocks-container {
+    width: 62.5%;
+}
+
+.small-set-blocks .black-blocks-container {
+    width: 50%;
+}
+
+.white-blocks {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-grow: 1;
+    border: 1px solid #001632;
+    border-radius: 4px;
+    background: whitesmoke;
+    box-shadow:
+            inset -2px -3px 5px rgba(154, 147, 140, 0.5);
+}
+
+/*background: deepskyblue;
+box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px rgba(255, 255, 255, 1);*/
+
+.black-blocks {
+    z-index: 2;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 2.5vw;
+    height: 14vw;
+    border-radius: 4px;
+    background: black;
+    box-shadow:
+            inset -1px -1px 5px rgba(154, 147, 140, 0.5);
+}
+
+.hint {
+    position: absolute;
+}
+
+.white-blocks .hint {
+    bottom: 2vw;
+}
+
+.black-blocks .hint {
+    color: whitesmoke;
+    bottom: 1vw;
+}
+
+@media(max-height: 300px) {
+    body {
+        grid-template-rows: 34px auto;
+    }
+    .site-title {
+        margin: 10px 20px;
+        font-size: 14px;
+    }
+}
